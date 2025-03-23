@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(230, 221, 221);
+}
+
+a:hover {
+  color: #c5e59e;
+}
+
+/* Header Styles */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #34495e;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+}
+
+header h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #3498db;
+}
+
+/* Sections */
+section {
+  padding: 200px 100px;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  background-color: #ecf0f1;
+  max-width: 100vw;
+}
+
+#about img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(66, 148, 88, 0.6);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: floating 3s infinite ease-in-out;
+}
+
+#about img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 0 35px rgba(255, 105, 180, 0.9);
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#about p {
+  max-width: 800px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects .project-container {
+  display: flex;
+  justify-content: center;
+  gap: auto;
+  padding-bottom: 10px;
+}
+
+.project {
+  width: 380px;
+  height: 480px;
+  background-color: #3d4646;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  padding: 60px;
+}
+
+.project h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 100px;
+}
+
+.skill-card {
+  width: 20%;
+  margin: 15px;
+  text-align: center;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+#contactme {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#sendBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #32ac36;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#sendBtn:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 20px #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  color: #73b9e8;
+  transform: scale(1.2);
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #32ac36;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 20px #45a049;
+}
+
+/* Theme Toggle */
+:root {
+  --base-color: #f4f4f9;
+  --text-color: #080a0c;
+  --primary-color: #73b9e8;
+  --accent-color: #ff6f61;
+}
+
+.darkmode {
+  --base-color: #121212;
+  --text-color: #e8eff1;
+  --primary-color: #73b9e8;
+  --accent-color: #ff7043;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+}
+
+button {
+  padding: 0.8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  opacity: 0.8;
+}
+
+#theme-switch {
+  height: 30px;
+  width: 30px;
+  background-color: var(--base-color);
+  position: fixed;
+  top: 45px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
